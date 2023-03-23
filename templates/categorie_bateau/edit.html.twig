@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CategorieBateau{% endblock %}
+
+{% block body %}
+    <h1>Edit CategorieBateau</h1>
+
+    {{ include('categorie_bateau/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_categorie_bateau_index') }}">back to list</a>
+
+    {{ include('categorie_bateau/_delete_form.html.twig') }}
+{% endblock %}

@@ -24,13 +24,12 @@ class Type
     #[ORM\OneToMany(mappedBy: 'type', targetEntity: ReservationType::class)]
     private Collection $ReservationTypes;
 
-    #[ORM\OneToMany(mappedBy: 'type', targetEntity: Tarifer::class)]
-    private Collection $tarifers;
+  
 
     public function __construct()
     {
         $this->ReservationTypes = new ArrayCollection();
-        $this->tarifers = new ArrayCollection();
+        
     }
 
     public function getId(): ?int
@@ -92,33 +91,5 @@ class Type
         return $this;
     }
 
-    /**
-     * @return Collection<int, Tarifer>
-     */
-    public function getTarifers(): Collection
-    {
-        return $this->tarifers;
+    
     }
-
-    public function addTarifer(Tarifer $tarifer): self
-    {
-        if (!$this->tarifers->contains($tarifer)) {
-            $this->tarifers->add($tarifer);
-            $tarifer->setType($this);
-        }
-
-        return $this;
-    }
-
-    public function removeTarifer(Tarifer $tarifer): self
-    {
-        if ($this->tarifers->removeElement($tarifer)) {
-            // set the owning side to null (unless already changed)
-            if ($tarifer->getType() === $this) {
-                $tarifer->setType(null);
-            }
-        }
-
-        return $this;
-    }
-}

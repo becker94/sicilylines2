@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\TypeReservationRepository;
+use App\Repository\ReservationTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: TypeReservationRepository::class)]
-class TypeReservation
+#[ORM\Entity(repositoryClass: ReservationTypeRepository::class)]
+class ReservationType
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -16,10 +16,10 @@ class TypeReservation
     #[ORM\Column]
     private ?int $nombre = null;
 
-    #[ORM\ManyToOne(inversedBy: 'TypeReservations')]
+    #[ORM\ManyToOne(inversedBy: 'ReservationType')]
     private ?Reservation $reservation = null;
 
-    #[ORM\ManyToOne(inversedBy: 'TypeReservations')]
+    #[ORM\ManyToOne(inversedBy: 'ReservationType')]
     private ?Type $type = null;
 
     public function getId(): ?int

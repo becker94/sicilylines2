@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CategorieBateau index{% endblock %}
+
+{% block body %}
+    <h1>CategorieBateau index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>NbMAx</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie_bateau in categorie_bateaus %}
+            <tr>
+                <td>{{ categorie_bateau.id }}</td>
+                <td>{{ categorie_bateau.nbMAx }}</td>
+                <td>
+                    <a href="{{ path('app_categorie_bateau_show', {'id': categorie_bateau.id}) }}">show</a>
+                    <a href="{{ path('app_categorie_bateau_edit', {'id': categorie_bateau.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_categorie_bateau_new') }}">Create new</a>
+{% endblock %}

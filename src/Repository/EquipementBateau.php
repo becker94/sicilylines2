@@ -18,7 +18,7 @@ class EquipementBateauRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, EquipementBateau:class);
+        parent::__construct($registry, EquipementBateau::class);
     }
 
     public function save(EquipementBateau $entity, bool $flush = false): void
