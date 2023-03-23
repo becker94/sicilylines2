@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New LiaisonPeriodeType{% endblock %}
+
+{% block body %}
+    <h1>Create new LiaisonPeriodeType</h1>
+
+    {{ include('liaison_periode_type/_form.html.twig') }}
+
+    <a href="{{ path('app_liaison_periode_type_index') }}">back to list</a>
+{% endblock %}

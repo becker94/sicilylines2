@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Liaison{% endblock %}
+
+{% block body %}
+    <h1>Edit Liaison</h1>
+
+    {{ include('liaison/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_liaison_index') }}">back to list</a>
+
+    {{ include('liaison/_delete_form.html.twig') }}
+{% endblock %}

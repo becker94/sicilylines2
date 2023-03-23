@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Traversee{% endblock %}
+
+{% block body %}
+    <h1>Create new Traversee</h1>
+
+    {{ include('traversee/_form.html.twig') }}
+
+    <a href="{{ path('app_traversee_index') }}">back to list</a>
+{% endblock %}

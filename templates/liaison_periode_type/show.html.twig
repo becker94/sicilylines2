@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LiaisonPeriodeType{% endblock %}
+
+{% block body %}
+    <h1>LiaisonPeriodeType</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ liaison_periode_type.id }}</td>
+            </tr>
+            <tr>
+                <th>Tarif</th>
+                <td>{{ liaison_periode_type.tarif }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_liaison_periode_type_index') }}">back to list</a>
+
+    <a href="{{ path('app_liaison_periode_type_edit', {'id': liaison_periode_type.id}) }}">edit</a>
+
+    {{ include('liaison_periode_type/_delete_form.html.twig') }}
+{% endblock %}

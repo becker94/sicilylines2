@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Periode{% endblock %}
+
+{% block body %}
+    <h1>Create new Periode</h1>
+
+    {{ include('periode/_form.html.twig') }}
+
+    <a href="{{ path('app_periode_index') }}">back to list</a>
+{% endblock %}
