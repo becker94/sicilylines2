@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}LiaisonPeriodeType index{% endblock %}
+{% block title %}About{% endblock %}
 
 {% block body %}
 <nav class="navbar navbar-expand-lg bg-light">
@@ -45,39 +45,39 @@
 
 
 			</div>
+
       
 	</nav>
-    <h1>LiaisonPeriodeType index</h1>
+    <section class="jumbotron text-center" style="background:#fff1c1;">
+        <div class="container">
+          <h1 class="jumbotron-heading">About us</h1>
+          <p class="lead text-muted">Le Groupe SicilyLines est un acteur majeur et incontournable du monde du tourisme.
+La très large gamme de voyages proposée impose  SicilyLines et les marques du groupe comme un tour-opérateur de premier plan, spécialiste des circuits accompagnés, des séjours balnéaires, du voyage à la carte et voyage sur mesure d’exception.</p>
+          
+        </div>
+      </section>
+      <div class="row" style="background:#fff1c1;">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 class="fw-normal">Toujours plus de services</h2>
+        <p>Cartes de voyage, files prioritaires aux controles de sureté, assistance téléphonique, démarches pour vos visas, assurance Allianz</p>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Tarif</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for liaison_periode_type in liaison_periode_types %}
-            <tr>
-                <td>{{ liaison_periode_type.id }}</td>
-                <td>{{ liaison_periode_type.tarif }}</td>
-                <td>
-                    <a href="{{ path('app_liaison_periode_type_show', {'id': liaison_periode_type.id}) }}">show</a>
-                    <a href="{{ path('app_liaison_periode_type_edit', {'id': liaison_periode_type.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_liaison_periode_type_new') }}">Create new</a>
-    <footer
-		class="bg-light mx-auto fixed-bottom">
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 class="fw-normal">Voyagez en toute sérénité</h2>
+        <p>Afin de vous garantir la meilleur offre, nous disposons d'un système de réservation mis à jour en temps réel. Dès que vous confirmez, le prix de votre voyage ne peut plus augmenter.</p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 class="fw-normal">Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+      <footer
+		class="bg-light mx-auto ">
 		<!-- Grid container -->
 		<div
 			class="container p-4 mx-auto">

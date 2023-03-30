@@ -1,8 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}LiaisonPeriodeType index{% endblock %}
+{% block title %}home
+{% endblock %}
 
 {% block body %}
+
+	
 <nav class="navbar navbar-expand-lg bg-light">
 
 		<div class="container-fluid">
@@ -47,37 +50,39 @@
 			</div>
       
 	</nav>
-    <h1>LiaisonPeriodeType index</h1>
+   <div class="container" style="display:table-footer-group;background:#fff1c1;">
+   
+ 
+        <div class="row">
+ 
+            <div class="col-lg-6">
+                 <img class="img-fluid" src="https://user-images.githubusercontent.com/75130312/206395228-c49b2f15-887f-4236-8118-2bdce01cfdc9.png" alt>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Tarif</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for liaison_periode_type in liaison_periode_types %}
-            <tr>
-                <td>{{ liaison_periode_type.id }}</td>
-                <td>{{ liaison_periode_type.tarif }}</td>
-                <td>
-                    <a href="{{ path('app_liaison_periode_type_show', {'id': liaison_periode_type.id}) }}">show</a>
-                    <a href="{{ path('app_liaison_periode_type_edit', {'id': liaison_periode_type.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_liaison_periode_type_new') }}">Create new</a>
+                
+            </div>
+ 
+            
+ 
+            <div class="col-lg-6" >
+                <h1 class="d-flex" style="margin-top: 9rem;
+margin-left: 4rem;">
+                    Votre plus beau voyage commence ici !
+                </h1>
+                <div style="margin-top: 3rem;
+margin-left: 4rem;">
+                <button type="button" class="btn btn-primary" ><a class="nav-link" href="/reserverationtype">Réserver</a></button>
+               <button type="button" class="btn btn-light" ><a class="nav-link" href="/reserveration">Voir distination</a></button>
+                </div>
+            </div>
+ 
+            
+ 
+        </div>
+         
+    </div>
+    </div>
     <footer
-		class="bg-light mx-auto fixed-bottom">
+		class="bg-light mx-auto ">
 		<!-- Grid container -->
 		<div
 			class="container p-4 mx-auto">
@@ -170,4 +175,6 @@
 		</div>
 		<!-- Copyright -->
 	</footer>
+    
 {% endblock %}
+
