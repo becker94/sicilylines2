@@ -47,7 +47,7 @@
 			</div>
       
 	</nav>
-    <h1>Liaison index</h1>
+    <h1>Liaison</h1>
 
     <table class="table">
         <thead>
@@ -63,8 +63,11 @@
                 <td>{{ liaison.id }}</td>
                 <td>{{ liaison.duree ? liaison.duree|date('H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_liaison_show', {'id': liaison.id}) }}">show</a>
-                    <a href="{{ path('app_liaison_edit', {'id': liaison.id}) }}">edit</a>
+				            <button type="button" class="btn btn-primary" ><a href="{{ path('app_liaison_show', {'id': liaison.id}) }}">show</a></button>
+            <button type="button" class="btn btn-success" >                    <a href="{{ path('app_liaison_edit', {'id': liaison.id}) }}">edit</a>
+</button>
+
+                    
                 </td>
             </tr>
         {% else %}
@@ -74,8 +77,9 @@
         {% endfor %}
         </tbody>
     </table>
+            <button type="button" class="btn btn-primary" ><a href="{{ path('app_liaison_new') }}" style="color:white;">Create new</a></button>
 
-    <a href="{{ path('app_liaison_new') }}">Create new</a>
+    
     <footer
 		class="bg-light mx-auto fixed-bottom">
 		<!-- Grid container -->

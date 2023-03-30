@@ -63,8 +63,9 @@
                 <td>{{ reservation_type.id }}</td>
                 <td>{{ reservation_type.nombre }}</td>
                 <td>
-                    <a href="{{ path('app_reservation_type_show', {'id': reservation_type.id}) }}">show</a>
-                    <a href="{{ path('app_reservation_type_edit', {'id': reservation_type.id}) }}">edit</a>
+                   <button type="button" class="btn btn-primary" ><a href="{{ path('app_reservation_type_show', {'id': reservation_type.id}) }}" style="color:white;">show</a></button>  
+                    
+					<button type="button" class="btn btn-success" ><a href="{{ path('app_reservation_type_edit', {'id': reservation_type.id}) }}" style="color:white;">edit</a></button>
                 </td>
             </tr>
         {% else %}
@@ -74,8 +75,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_reservation_type_new') }}">Create new</a>
+<button type="button" class="btn btn-primary" ><a href="{{ path('app_reservation_type_new') }}" style="color:white;">Create new</a></button>
+    
     <footer
 		class="bg-light mx-auto fixed-bottom">
 		<!-- Grid container -->
