@@ -19,7 +19,7 @@ class TraverseeType extends AbstractType
             ->add('heure')
             ->add('liaison', EntityType::class, [
                 'class'=> Liaison::class,
-                'choice_label' => 'nom',
+                'choice_label' => 'id',
             ])
             ->add('bateau', EntityType::class, [
                 'class'=> Bateau::class,

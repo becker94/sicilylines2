@@ -3,14 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\CategorieBateau;
-use App\Form\CategorieBateau1Type;
+use App\Form\CategorieBateauType;
 use App\Repository\CategorieBateauRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/categorie/bateau')]
+#[Route('/categoriebateau')]
 class CategorieBateauController extends AbstractController
 {
     #[Route('/', name: 'app_categorie_bateau_index', methods: ['GET'])]
@@ -25,7 +25,7 @@ class CategorieBateauController extends AbstractController
     public function new(Request $request, CategorieBateauRepository $categorieBateauRepository): Response
     {
         $categorieBateau = new CategorieBateau();
-        $form = $this->createForm(CategorieBateau1Type::class, $categorieBateau);
+        $form = $this->createForm(CategorieBateauType::class, $categorieBateau);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -51,7 +51,7 @@ class CategorieBateauController extends AbstractController
     #[Route('/{id}/edit', name: 'app_categorie_bateau_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, CategorieBateau $categorieBateau, CategorieBateauRepository $categorieBateauRepository): Response
     {
-        $form = $this->createForm(CategorieBateau1Type::class, $categorieBateau);
+        $form = $this->createForm(CategorieBateauType::class, $categorieBateau);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
