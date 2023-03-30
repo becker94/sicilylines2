@@ -65,8 +65,10 @@
                 <td>{{ traversee.date ? traversee.date|date('Y-m-d') : '' }}</td>
                 <td>{{ traversee.heure ? traversee.heure|date('H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_traversee_show', {'id': traversee.id}) }}">show</a>
-                    <a href="{{ path('app_traversee_edit', {'id': traversee.id}) }}">edit</a>
+				<button type="button" class="btn btn-primary" >                    <a href="{{ path('app_traversee_show', {'id': traversee.id}) }}" style="color:white">show</a>
+</button>
+				<button type="button" class="btn btn-success" >                    <a href="{{ path('app_traversee_edit', {'id': traversee.id}) }}" style="color:white">edit</a>
+</button>
                 </td>
             </tr>
         {% else %}
@@ -76,8 +78,8 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_traversee_new') }}">Create new</a>
+      <button type="button" class="btn btn-primary" > <a href="{{ path('app_traversee_new') }}" style="color:white">Create new</a></button>
+   
     <footer
 		class="bg-light mx-auto fixed-bottom">
 		<!-- Grid container -->

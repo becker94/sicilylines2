@@ -63,8 +63,11 @@
                 <td>{{ port.id }}</td>
                 <td>{{ port.nom }}</td>
                 <td>
-                    <a href="{{ path('app_port_show', {'id': port.id}) }}">show</a>
-                    <a href="{{ path('app_port_edit', {'id': port.id}) }}">edit</a>
+				            <button type="button" class="btn btn-primary" ><a href="{{ path('app_port_show', {'id': port.id}) }}" style="color:white;">show</a></button>
+            <button type="button" class="btn btn-success" ><a href="{{ path('app_port_edit', {'id': port.id}) }}"style="color:white;">edit</a></button>
+
+                    
+                    
                 </td>
             </tr>
         {% else %}
@@ -75,7 +78,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_port_new') }}">Create new</a>
+    <button type="button" class="btn btn-primary" > <a href="{{ path('app_port_new') }}" style="color:white;">Create new</a> </button>
     <footer
 		class="bg-light mx-auto fixed-bottom">
 		<!-- Grid container -->
