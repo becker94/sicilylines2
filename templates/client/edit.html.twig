@@ -47,11 +47,12 @@
 			</div>
       
 	</nav>
-    <h1>Edit Client</h1>
+	<section style="background:#fff1c1;"><h1>Edit Client</h1>
 
     {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_client_index') }}">back to list</a>
+    <a href="{{ path('app_client_index') }}">back to list</a></section>
+    
 
     {{ include('client/_delete_form.html.twig') }}
     <footer
