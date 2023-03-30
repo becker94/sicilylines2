@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/liaison/periode/type')]
+#[Route('/liaisonperiodetype')]
 class LiaisonPeriodeTypeController extends AbstractController
 {
     #[Route('/', name: 'app_liaison_periode_type_index', methods: ['GET'])]
