@@ -6,6 +6,9 @@ use App\Entity\Traversee;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Bateau;
+use App\Entity\Liaison;
 
 class TraverseeType extends AbstractType
 {
@@ -14,8 +17,14 @@ class TraverseeType extends AbstractType
         $builder
             ->add('date')
             ->add('heure')
-            ->add('liaison')
-            ->add('bateau')
+            ->add('liaison', EntityType::class, [
+                'class'=> Liaison::class,
+                'choice_label' => 'nom',
+            ])
+            ->add('bateau', EntityType::class, [
+                'class'=> Bateau::class,
+                'choice_label' => 'nom',
+            ])
         ;
     }
 
