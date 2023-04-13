@@ -63,8 +63,8 @@
                 <td>{{ liaison.id }}</td>
                 <td>{{ liaison.duree ? liaison.duree|date('H:i:s') : '' }}</td>
                 <td>
-				            <button type="button" class="btn btn-primary" ><a href="{{ path('app_liaison_show', {'id': liaison.id}) }}">show</a></button>
-            <button type="button" class="btn btn-success" >                    <a href="{{ path('app_liaison_edit', {'id': liaison.id}) }}">edit</a>
+				            <button type="button" class="btn btn-primary" ><a href="{{ path('app_liaison_show', {'id': liaison.id}) }}" style="color:white;">show</a></button>
+            <button type="button" class="btn btn-success" >                    <a href="{{ path('app_liaison_edit', {'id': liaison.id}) }}" style="color:white;">edit</a>
 </button>
 
                     

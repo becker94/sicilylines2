@@ -28,7 +28,7 @@
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link " href="/client">Log in </a>
+						<a class="nav-link " href="/login">Log in </a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/client/new">Sign up</a>
@@ -47,13 +47,14 @@
 			</div>
       
 	</nav>
-    <h1>Create new Client</h1>
+	<div class=" form-signin w-50 m-auto"><h1>Creer votre compte</h1>
 
     {{ include('client/_form.html.twig') }}
-<button type="button" class="btn btn-primary">    <a href="{{ path('app_client_index') }}" style="color:white;">back to list</a>
-</button>
+<button type="button" class="btn btn-primary">    <a href="/login" style="color:white;">Log in ?</a>
+</button></div>
+    
     <footer
-		class="bg-light mx-auto fixed-bottom">
+		class="bg-light mx-auto ">
 		<!-- Grid container -->
 		<div
 			class="container p-4 mx-auto">

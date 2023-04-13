@@ -22,7 +22,7 @@ class ReservationTypeType extends AbstractType
             ])
                 ->add('type', EntityType::class, [
                     'class'=> Type::class,
-                    'choice_label' => 'id',
+                    'choice_label' => 'libelle',
                 ])
         ;
     }
