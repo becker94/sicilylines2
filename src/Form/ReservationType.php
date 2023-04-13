@@ -20,7 +20,7 @@ class ReservationType extends AbstractType
             'choice_label' => 'nom',
         ])
             ->add('traversee', EntityType::class, [
-                'class'=> traversee::class,
+                'class'=> Traversee::class,
                 'choice_label' => 'id',
             ])
         ;
