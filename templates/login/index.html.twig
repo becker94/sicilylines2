@@ -1,8 +1,81 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Client{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block body %}
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
 <nav class="navbar navbar-expand-lg bg-light">
 
 		<div class="container-fluid">
@@ -28,12 +101,12 @@
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link " href="/login">Log in </a>
+						<a class="nav-link " href="/client">Log in </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/signup">Sign up</a>
+						<a class="nav-link" href="/client/new">Sign up</a>
 					</li>
-					<a class="nav-link " href="#">
+					<a class="nav-link " href="/client">
 						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="24" height="24" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 							<circle cx="12" cy="12" r="9"></circle>
@@ -45,17 +118,31 @@
 
 
 			</div>
+
       
 	</nav>
-	<section style="background:#fff1c1;"><h1>Edit Client</h1>
+<main class="form-signin w-50 m-auto">
+  <form>
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-    {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
 
-    <a href="{{ path('app_client_index') }}">back to list</a></section>
-    
-
-    {{ include('client/_delete_form.html.twig') }}
-    <footer
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+<button type="button" class="btn btn-success" ><a class="nav-link" href="/client/new">Register</a></button>  </form>
+</main>
+     <footer
 		class="bg-light mx-auto ">
 		<!-- Grid container -->
 		<div
@@ -150,3 +237,4 @@
 		<!-- Copyright -->
 	</footer>
 {% endblock %}
+

@@ -28,7 +28,7 @@
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link " href="/client">Log in </a>
+						<a class="nav-link " href="/login">Log in </a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/client/new">Sign up</a>
@@ -54,6 +54,8 @@
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
+				<th>email</th>
+				<th>mot de pass</th>
                 <th>Adresse</th>
                 <th>Cp</th>
                 <th>Ville</th>
@@ -65,12 +67,17 @@
             <tr>
                 <td>{{ client.id }}</td>
                 <td>{{ client.nom }}</td>
+				<td>{{ client.email }}</td>
+				<td>{{ client.mdp }}</td>
                 <td>{{ client.adresse }}</td>
                 <td>{{ client.cp }}</td>
                 <td>{{ client.ville }}</td>
                 <td>
-                    <a href="{{ path('app_client_show', {'id': client.id}) }}">show</a>
-                    <a href="{{ path('app_client_edit', {'id': client.id}) }}">edit</a>
+				  <button type="button" class="btn btn-primary">                    <a href="{{ path('app_client_show', {'id': client.id}) }}" style="color:white;">show</a>
+</button>
+				<button type="button" class="btn btn-success">                    <a href="{{ path('app_client_edit', {'id': client.id}) }}" style="color:white;">edit</a>
+</button>
+
                 </td>
             </tr>
         {% else %}
