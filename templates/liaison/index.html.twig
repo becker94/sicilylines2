@@ -18,7 +18,7 @@
 
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/home">Home</a>
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/about">About</a>
@@ -55,6 +55,8 @@
                 <th>Id</th>
                 <th>Duree</th>
                 <th>actions</th>
+				
+
             </tr>
         </thead>
         <tbody>
@@ -62,7 +64,7 @@
             <tr>
                 <td>{{ liaison.id }}</td>
                 <td>{{ liaison.duree ? liaison.duree|date('H:i:s') : '' }}</td>
-                <td>
+				
 				            <button type="button" class="btn btn-primary" ><a href="{{ path('app_liaison_show', {'id': liaison.id}) }}" style="color:white;">show</a></button>
             <button type="button" class="btn btn-success" >                    <a href="{{ path('app_liaison_edit', {'id': liaison.id}) }}" style="color:white;">edit</a>
 </button>
@@ -81,7 +83,7 @@
 
     
     <footer
-		class="bg-light mx-auto fixed-bottom">
+		class="bg-light mx-auto ">
 		<!-- Grid container -->
 		<div
 			class="container p-4 mx-auto">
